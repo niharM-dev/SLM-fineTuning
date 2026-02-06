@@ -1,0 +1,482 @@
+{
+  "frameworks": [
+    {
+      "id": "framework_iso27001",
+      "name": "ISO/IEC 27001",
+      "aliases": [
+        "ISO 27001",
+        "ISO/IEC 27001:2022"
+      ],
+      "description": "ISO/IEC 27001 is an international standard for establishing, implementing, maintaining, and continually improving an information security management system. The framework is built around a risk-based approach where organizations identify assets, assess threats and vulnerabilities, and select controls that reduce risk to an acceptable level. It emphasizes leadership commitment, clear scope definition, and evidence-based documentation that can be audited. The standard aligns governance, policy, and operational procedures into a single management system so that security decisions are traceable and repeatable. It requires organizations to define objectives, assign responsibilities, and measure performance through internal audits and management review. The Annex A control set, while no longer a strict checklist, provides a comprehensive menu of security topics such as access control, cryptography, physical security, supplier management, and incident response. ISO 27001 also stresses continual improvement, which means lessons learned from audits, incidents, and metrics are fed back into updates of policies, controls, and training. For compliance mapping, ISO 27001 provides a stable taxonomy to map other frameworks, policies, and controls because it is principle-driven and widely adopted across industries and geographies. Its strength is the integration of governance, operational controls, and continual improvement within a single, certifiable standard that can be used to demonstrate mature security practices to regulators, partners, and customers."
+    },
+    {
+      "id": "framework_nist80053",
+      "name": "NIST SP 800-53",
+      "aliases": [
+        "NIST 800-53",
+        "NIST SP 800-53 Rev 5"
+      ],
+      "description": "NIST SP 800-53 provides a catalog of security and privacy controls used widely in the public sector and adopted by many private organizations. The framework is control-centric, offering detailed requirements grouped into families such as Access Control, Audit and Accountability, Configuration Management, Incident Response, and System and Communications Protection. It is designed to support risk management across the system life cycle, from design and implementation to operations and decommissioning. Organizations tailor the catalog by selecting a baseline and applying overlays or enhancements to address specific environments, missions, or regulatory obligations. NIST 800-53 emphasizes traceability and evidence, requiring clear implementation statements, assignment of roles, and continuous monitoring. The control language is precise enough to enable consistent assessment while still allowing flexibility in implementation. This catalog is often used as a master mapping source because it defines granular controls that can be related to high-level policies or other frameworks. Its privacy controls are integrated, reflecting modern expectations about data governance and compliance. For mapping, NIST 800-53 provides a comprehensive list of control objectives and statements, making it easier to link policies to specific implementation tasks and to show coverage across different compliance regimes. The result is a framework that supports detailed control mapping, audit readiness, and transparent risk management with a focus on measurable security outcomes."
+    },
+    {
+      "id": "framework_soc2",
+      "name": "SOC 2 Trust Services Criteria",
+      "aliases": [
+        "SOC 2",
+        "SOC 2 TSC"
+      ],
+      "description": "SOC 2 is an assurance framework focused on the Trust Services Criteria: Security, Availability, Processing Integrity, Confidentiality, and Privacy. It is commonly used by service organizations to demonstrate their control environment to customers through an independent audit report. The framework is principle-based and centers on the design and operating effectiveness of controls over a defined period. SOC 2 requires organizations to identify risks, implement controls, and provide evidence that controls are operating consistently. It covers governance practices like policies, risk assessment, and change management, as well as technical controls such as access restrictions, logging, and incident response. The emphasis on evidence and auditor evaluation makes documentation, ticketing, and monitoring artifacts critical to compliance. SOC 2 also allows flexibility in scoping, which lets organizations focus on the systems and services relevant to customers. For mapping, SOC 2 provides criteria that can be mapped to controls and policies in other frameworks, helping organizations show alignment with broader security expectations. The framework is especially relevant for SaaS and cloud providers because it reflects operational practices that impact customer trust. SOC 2 assessments are recurring, encouraging continuous improvement and regular testing. As a result, SOC 2 functions as a practical bridge between high-level security commitments and day-to-day operational controls that can be verified by auditors and customers alike."
+    },
+    {
+      "id": "framework_pcidss",
+      "name": "PCI DSS",
+      "aliases": [
+        "PCI DSS 4.0",
+        "Payment Card Industry Data Security Standard"
+      ],
+      "description": "PCI DSS is a mandatory security standard for organizations that store, process, or transmit payment card data. The standard defines technical and operational requirements to protect cardholder data and reduce fraud. It is organized into twelve high-level requirements, including maintaining secure networks, protecting stored data, maintaining vulnerability management programs, implementing strong access controls, monitoring networks, and maintaining an information security policy. PCI DSS is prescriptive, with clear guidance on configuration standards, encryption, and logging expectations for systems in the cardholder data environment. The standard requires regular vulnerability scanning, penetration testing, and rigorous change management to ensure systems remain secure over time. Evidence collection is essential, including network diagrams, inventories, access lists, and log reviews. PCI DSS also emphasizes segmentation to minimize the scope of in-scope systems, which directly impacts control mapping and risk reduction. For compliance mapping, PCI DSS can be aligned with broader security programs by mapping its requirements to general security controls and governance policies. This helps organizations avoid duplicate work by showing how existing controls satisfy PCI DSS objectives. The framework is widely recognized and regularly updated, making it an important reference for both regulatory compliance and security assurance in payment processing environments. It also requires organizations to maintain a secure policy framework, perform annual assessments, and document compensating controls when a specific requirement cannot be met, ensuring that risk decisions are transparent, justified, and reviewed by qualified assessors."
+    }
+  ],
+  "policies": [
+    {
+      "id": "policy_access_control",
+      "name": "Access Control Policy",
+      "aliases": [
+        "Identity and Access Management Policy"
+      ],
+      "description": "The Access Control Policy defines how users, systems, and services are granted, reviewed, and removed from access to information resources. It establishes the principle of least privilege, requiring that access be limited to what is necessary for business functions. The policy describes how identities are provisioned, authenticated, and authorized, including requirements for strong passwords or multi-factor authentication. It sets expectations for role-based access, segregation of duties, and approval workflows for elevated privileges. The policy also defines periodic access reviews, ensuring that permissions remain appropriate as roles change. It includes guidance on privileged accounts, service accounts, and emergency access procedures, along with requirements for logging and monitoring access events. This policy connects governance to control implementation by outlining responsibilities for access administrators, system owners, and security teams. It also requires documenting access decisions and retaining evidence for audits. The Access Control Policy is mapped to controls such as account management, authentication, authorization, and access review controls. It supports compliance by translating framework expectations into operational requirements for teams that manage users and systems. Over time, the policy should be reviewed and updated to reflect changing technology, business needs, and emerging threats. Because access is central to most security incidents, this policy provides a foundational layer that supports many other controls, such as logging, incident response, and data protection."
+    },
+    {
+      "id": "policy_incident_response",
+      "name": "Incident Response Policy",
+      "aliases": [
+        "Security Incident Response Policy"
+      ],
+      "description": "The Incident Response Policy establishes the organization\u2019s approach to detecting, responding to, and recovering from security incidents. It defines what constitutes an incident, how incidents are reported, and the roles responsible for triage and escalation. The policy outlines incident classification, severity levels, and response time targets to ensure consistency and accountability. It requires maintaining an incident response plan, conducting regular tabletop exercises, and coordinating with legal, compliance, and communications teams. The policy also details requirements for evidence preservation, forensic analysis, and root cause investigation. Post-incident activities, including lessons learned and corrective actions, are required to improve defenses. This policy maps to controls such as monitoring, alerting, log retention, forensic readiness, and communication procedures. It also aligns with regulatory expectations for breach notification and reporting timelines. By setting expectations for training and rehearsals, the policy ensures that staff understand their responsibilities and can respond effectively under pressure. The Incident Response Policy connects operational practices to compliance obligations and helps demonstrate readiness during audits. It also supports continuous improvement by requiring incident metrics and program reviews. Effective incident response reduces downtime, limits impact, and builds stakeholder trust, making it an essential policy for any compliance-focused security program. It further requires integrating incident handling with business continuity planning and documenting communication templates so that stakeholders receive consistent, timely updates during disruptive events."
+    },
+    {
+      "id": "policy_data_classification",
+      "name": "Data Classification and Handling Policy",
+      "aliases": [
+        "Data Classification Policy"
+      ],
+      "description": "The Data Classification and Handling Policy defines how information is categorized based on sensitivity and how it must be protected throughout its life cycle. It establishes classification levels such as Public, Internal, Confidential, and Restricted, and provides clear criteria for assigning each level. The policy sets expectations for labeling, storage, transmission, and disposal, ensuring that sensitive data receives stronger protections. It includes requirements for encryption, access control, and secure sharing mechanisms. The policy also describes handling requirements for regulated data such as personal data, payment card data, or health information. Responsibilities are assigned to data owners, custodians, and users, with training requirements to ensure consistent application. The policy links to controls such as encryption, data loss prevention, and access review processes. By defining data handling rules, it helps organizations reduce risk and demonstrate compliance with privacy and security frameworks. The policy also requires periodic reviews of data classification schemas to reflect changes in business processes or regulatory requirements. It supports auditing by defining what evidence is needed to show that data is appropriately protected. This policy is critical for mapping because it provides a direct link between abstract compliance requirements and concrete data protection controls, making it easier to demonstrate coverage across frameworks and to prioritize security investments based on data sensitivity."
+    },
+    {
+      "id": "policy_change_management",
+      "name": "Change Management Policy",
+      "aliases": [
+        "Configuration and Change Control Policy"
+      ],
+      "description": "The Change Management Policy defines how changes to systems, applications, and infrastructure are requested, reviewed, approved, implemented, and verified. It establishes a formal process to reduce the risk of outages or security issues caused by unplanned modifications. The policy requires documentation of changes, impact assessments, and rollback plans. It outlines approval thresholds based on risk and includes requirements for segregation of duties between developers and production deployers. The policy also requires testing and validation before changes are released to production, along with post-implementation review to confirm success. Emergency change procedures are defined to ensure urgent fixes still follow documented safeguards. Logging and retention requirements support auditability and evidence collection. The Change Management Policy maps to controls in configuration management, system integrity, and operational resilience. It supports compliance by demonstrating that system modifications are controlled and traceable. The policy aligns with frameworks that require stability, availability, and accountability for system changes. Regular audits of change records and metrics ensure the process remains effective. This policy is a key governance tool for reducing operational risk and ensuring compliance obligations are met while enabling the organization to evolve its technology safely and predictably. The policy also expects metrics on change success rates and post-change incident analysis so management can identify recurring risks and improve engineering practices over time."
+    },
+    {
+      "id": "policy_vendor_risk",
+      "name": "Vendor Risk Management Policy",
+      "aliases": [
+        "Third-Party Risk Policy"
+      ],
+      "description": "The Vendor Risk Management Policy establishes how third-party suppliers are evaluated, onboarded, monitored, and offboarded to manage security and compliance risks. It requires due diligence before engaging a vendor, including review of security controls, privacy practices, and contractual protections. The policy defines risk tiers based on the type of data accessed and the criticality of the service, and it specifies the required assessments for each tier. It mandates contract clauses for data protection, breach notification, and right to audit. Ongoing monitoring is required through periodic reassessments, review of audit reports, and tracking of remediation plans. The policy also includes requirements for inventorying vendors and documenting data flows. It maps to controls such as third-party assessments, security questionnaires, and supplier management processes. This policy ensures that external dependencies do not undermine internal compliance obligations. It supports frameworks that require oversight of suppliers and demonstrates that the organization maintains accountability for outsourced services. By establishing clear roles and escalation paths, the policy ensures that vendor issues are addressed promptly. The Vendor Risk Management Policy is essential for organizations that rely on cloud providers, SaaS tools, or outsourced services, and it provides a structured way to align vendor practices with internal security and regulatory requirements."
+    },
+    {
+      "id": "policy_business_continuity",
+      "name": "Business Continuity and Disaster Recovery Policy",
+      "aliases": [
+        "BCDR Policy"
+      ],
+      "description": "The Business Continuity and Disaster Recovery Policy defines how the organization prepares for, responds to, and recovers from disruptive events. It establishes requirements for business impact analysis, recovery time objectives, and recovery point objectives. The policy outlines continuity strategies such as redundancy, backups, and alternate processing locations. It requires documented recovery procedures, regular testing, and validation of recovery capabilities. Roles and responsibilities are assigned for crisis management, communications, and system recovery. The policy also requires maintaining inventories of critical systems and dependencies, including third-party services. Evidence from exercises and tests is captured to demonstrate readiness. The policy maps to controls for backup management, system resilience, and incident response coordination. It supports compliance by showing that availability and resilience obligations are met. Regular reviews ensure that plans remain current as systems and business priorities change. By integrating with incident response, the policy ensures coordinated decision-making during outages or disasters. This policy is critical for reducing downtime, protecting customer trust, and meeting regulatory expectations for continuity. It provides a governance framework that connects technical safeguards to business objectives and demonstrates that the organization can sustain operations during adverse conditions while protecting critical data and services. It also requires coordination with external partners and regulators where applicable, ensuring recovery plans include third-party dependencies and clear decision authority for activating contingency measures."
+    }
+  ],
+  "controls": [
+    {
+      "id": "control_mfa",
+      "name": "Multi-Factor Authentication",
+      "aliases": [
+        "MFA",
+        "Strong Authentication"
+      ],
+      "description": "Multi-Factor Authentication is a control that requires users to present two or more independent factors before access is granted. The control reduces the risk of credential compromise by combining something a user knows, something a user has, or something a user is. MFA can be implemented through authenticator apps, hardware tokens, or biometric verification, and it should be enforced for privileged accounts and remote access. The control includes requirements for enrollment, recovery processes, and periodic review of exceptions. It also addresses secure configuration of MFA solutions, such as phishing-resistant methods and session management protections. MFA should be integrated with centralized identity systems and monitored for anomalous events. Logging of authentication attempts and success or failure metrics helps with detection and auditability. The control supports compliance by demonstrating strong access protection, which is frequently required across security frameworks. Implementation guidance often includes protecting administrative interfaces, reducing reliance on legacy authentication, and ensuring fallback mechanisms do not weaken the control. MFA is most effective when paired with user education and access reviews. For mapping, MFA ties directly to access control policies and to framework requirements around authentication. It supports risk reduction by limiting the impact of password reuse, credential stuffing, and social engineering attacks."
+    },
+    {
+      "id": "control_least_privilege",
+      "name": "Least Privilege and Role-Based Access",
+      "aliases": [
+        "Least Privilege",
+        "RBAC"
+      ],
+      "description": "Least Privilege and Role-Based Access is a control that ensures users and systems have only the permissions necessary to perform assigned tasks. It relies on defining roles that map to job functions and assigning permissions accordingly. The control requires regular access reviews to identify and remove excessive privileges, along with documented approvals for elevated access. It also includes segmentation of duties to prevent conflicts of interest, particularly in sensitive operations such as financial processing or system administration. The control requires the use of groups and roles rather than individual permissions wherever possible, making access easier to manage and audit. It includes requirements for handling temporary access, such as time-bound elevation and automatic expiration. Logging and monitoring of privileged actions is required to detect misuse. The control supports compliance by demonstrating that access is controlled and traceable. Effective implementation requires accurate identity inventories, clear role definitions, and consistent offboarding processes. Least privilege reduces the blast radius of compromised accounts and limits accidental changes. For mapping, it connects to access control policies and to framework requirements around authorization and privilege management. The control provides a measurable way to align security expectations with day-to-day operational access decisions. It should be enforced across cloud, on-premises, and SaaS platforms with centralized identity governance so that access decisions are consistent, auditable, and aligned with documented roles and responsibilities."
+    },
+    {
+      "id": "control_logging_monitoring",
+      "name": "Centralized Logging and Monitoring",
+      "aliases": [
+        "Logging",
+        "Security Monitoring"
+      ],
+      "description": "Centralized Logging and Monitoring is a control that collects, normalizes, and analyzes security-relevant logs from systems, applications, and network devices. The control requires defined log sources, retention periods, and access restrictions to ensure logs are complete and trustworthy. It includes continuous monitoring for suspicious activity, with alerting thresholds and escalation procedures. The control also specifies time synchronization to support accurate event correlation. Log integrity protections such as write-once storage or cryptographic signing help preserve evidence for investigations. Regular review of alerts and tuning of detection rules are required to reduce false positives and improve coverage. The control supports compliance by providing evidence of system activity, enabling incident response, and supporting audits. Implementation guidance often includes centralized SIEM systems and dashboarding for operational visibility. Logging and monitoring should cover authentication events, privileged actions, configuration changes, and data access. This control maps to incident response policies, change management policies, and framework requirements for audit and accountability. Effective monitoring improves detection of intrusions, accelerates response, and supports continuous improvement of security posture. It should integrate with incident response playbooks and provide dashboards that are reviewed by security operations to ensure that detections are actionable and that coverage evolves with new systems and threats."
+    },
+    {
+      "id": "control_encryption",
+      "name": "Encryption for Data at Rest and In Transit",
+      "aliases": [
+        "Encryption",
+        "Cryptographic Protection"
+      ],
+      "description": "Encryption for Data at Rest and In Transit is a control that protects sensitive information by rendering it unreadable without the proper cryptographic keys. The control requires strong, industry-approved algorithms and secure key management practices, including rotation, access controls, and backup of keys. Encryption should be applied to storage systems, databases, backups, and removable media, as well as to network communications through protocols like TLS. The control includes requirements for identifying data that must be encrypted based on classification and regulatory obligations. It also addresses secure configuration of cipher suites, certificate management, and avoidance of deprecated protocols. Key management is critical and often involves hardware security modules or managed key services. The control supports compliance with privacy and data protection laws by reducing the impact of data exposure. It maps to data classification policies and controls around confidentiality. Evidence for audits includes encryption configuration documentation, key management procedures, and monitoring of encryption status. Proper implementation limits the risk of data breaches and provides assurance to customers and regulators that sensitive data is protected in storage and during transmission. Regular validation, such as key rotation tests and certificate renewal drills, ensures that encryption remains effective and that operational processes do not create gaps in protection."
+    },
+    {
+      "id": "control_secure_config",
+      "name": "Secure Configuration Baselines",
+      "aliases": [
+        "Configuration Baselines",
+        "Hardening"
+      ],
+      "description": "Secure Configuration Baselines is a control that requires systems and applications to be configured according to approved, hardened standards. The control includes the removal of unnecessary services, default accounts, and insecure settings. It mandates the use of configuration templates, version control for configuration changes, and periodic scanning to ensure compliance with baseline standards. The control also requires documenting deviations and applying compensating controls when necessary. It integrates with change management processes to ensure baseline updates are reviewed and approved. Regular configuration audits detect drift and unauthorized changes. The control supports compliance by demonstrating that systems are built and maintained securely. It maps to framework requirements for configuration management, system integrity, and vulnerability reduction. Evidence includes baseline documents, scan results, and remediation records. Secure configuration reduces attack surface and provides consistent, repeatable system builds. It also simplifies incident response by ensuring systems are known and predictable. Implementing configuration baselines across operating systems, databases, and applications improves resilience and operational stability while enabling efficient compliance reporting. Baselines should be aligned with vendor guidance and industry benchmarks such as CIS, and exceptions must be tracked with owners, remediation timelines, and periodic review to avoid permanent insecure states. Routine audits should include remediation verification and evidence retention so that deviations are not only fixed but also demonstrably controlled and reported to governance stakeholders."
+    },
+    {
+      "id": "control_vulnerability_mgmt",
+      "name": "Vulnerability Management",
+      "aliases": [
+        "Patch Management",
+        "Vuln Management"
+      ],
+      "description": "Vulnerability Management is a control that identifies, prioritizes, and remediates security weaknesses in systems and applications. It includes regular scanning, threat intelligence review, and tracking of remediation efforts. The control requires defined remediation timelines based on severity and business impact, with escalation for overdue items. It also includes processes for verifying fixes and documenting exceptions. Patch management is a key component, ensuring that software updates are applied safely and consistently. The control integrates with asset inventories to ensure coverage of all systems and with change management to prevent disruptions. Evidence includes scan reports, remediation tickets, and management dashboards. This control supports compliance by reducing exploitable weaknesses and demonstrating proactive security maintenance. It maps to frameworks that require vulnerability identification, remediation, and monitoring. Effective vulnerability management includes communication with system owners, tracking of third-party vulnerabilities, and periodic program reviews. By reducing exposure to known threats, this control improves security posture and supports audit readiness with measurable, repeatable processes. The process should include asset criticality context so that high-impact systems receive prioritized attention, and it should incorporate verification scans after remediation to confirm closure. It should also include coordination with third-party vendors, patch testing in staging environments, and clear exception criteria approved by security leadership to avoid unmanaged technical debt."
+    },
+    {
+      "id": "control_backup_recovery",
+      "name": "Backup and Recovery",
+      "aliases": [
+        "Backups",
+        "Disaster Recovery Backups"
+      ],
+      "description": "Backup and Recovery is a control that ensures critical data and systems can be restored after accidental deletion, corruption, or disaster. The control requires regular backups, defined retention periods, and secure storage of backup media. It includes requirements for encryption, access controls, and protection against ransomware. The control specifies recovery procedures and periodic testing to verify that backups can be restored within required timeframes. It also requires documentation of backup scope, schedules, and responsibilities. This control supports business continuity objectives and regulatory expectations for data preservation. Evidence includes backup logs, test results, and recovery plans. The control maps to business continuity policies and to framework requirements for availability and resilience. Effective backup and recovery programs include offline or immutable backups, separation of duties, and monitoring of backup success rates. By ensuring data can be recovered, this control reduces operational risk and supports trust with customers and regulators. It also provides a foundation for rapid response to incidents that affect data integrity or availability. Backup scope should include configuration data and critical SaaS content, and recovery tests should validate not only data restoration but also application dependencies and access controls. The control should include monitoring for backup failures, automated alerts for missed jobs, and periodic validation that recovery objectives remain aligned with current business priorities."
+    },
+    {
+      "id": "control_security_awareness",
+      "name": "Security Awareness Training",
+      "aliases": [
+        "Security Training",
+        "Awareness Program"
+      ],
+      "description": "Security Awareness Training is a control that educates employees and contractors about security risks, policies, and expected behaviors. The control requires onboarding training and periodic refreshers, covering topics such as phishing, password hygiene, data handling, and incident reporting. It includes role-based training for privileged users or specialized roles. The control defines metrics for completion and effectiveness, such as quiz results or simulated phishing outcomes. It also requires maintaining training records to support audits. Security awareness reduces human error, which is a common cause of incidents. The control supports compliance by demonstrating that personnel understand relevant policies and legal obligations. It maps to frameworks that require workforce security and policy dissemination. Effective programs are engaging, updated regularly, and aligned with real threats. By building a security-minded culture, this control supports the success of technical safeguards and improves incident reporting. Evidence includes training content, attendance records, and program reviews. Over time, awareness training contributes to risk reduction and strengthens the organization\u2019s overall security posture. The program should be tailored to organizational risk, updated after incidents, and reinforced by leadership messaging so that security responsibilities are viewed as part of daily work. Measurement should include behavioral indicators such as reduced phishing click rates and improved reporting, and program content should be localized for different roles and regions to maximize relevance."
+    },
+    {
+      "id": "control_network_segmentation",
+      "name": "Network Segmentation",
+      "aliases": [
+        "Segmentation",
+        "Network Isolation"
+      ],
+      "description": "Network Segmentation is a control that divides networks into smaller zones to limit the spread of threats and protect sensitive systems. The control requires defining trust boundaries, using firewalls or access control lists, and enforcing least privilege between segments. Segmentation reduces the scope of compliance requirements by isolating regulated environments such as payment systems. The control includes periodic review of network rules, documentation of data flows, and monitoring for unauthorized access. It supports compliance by limiting exposure and demonstrating controlled access to sensitive systems. Segmentation is often required for PCI DSS and is a recommended practice in many frameworks. The control maps to access control policies and to configuration management processes. Evidence includes network diagrams, rule sets, and change records. Effective segmentation also supports incident response by containing attacks and simplifying forensic analysis. By limiting lateral movement, segmentation reduces the impact of compromised systems and strengthens overall network security. Segmentation strategies should be validated through periodic testing, including attempts to traverse between zones, to confirm that controls block unauthorized paths and remain effective after changes. Documentation should include detailed diagrams and data flow inventories so auditors can understand the scope boundaries and verify that sensitive environments are appropriately isolated. Regular review of firewall rules and microsegmentation policies helps maintain least privilege between zones."
+    },
+    {
+      "id": "control_third_party_assessment",
+      "name": "Third-Party Security Assessment",
+      "aliases": [
+        "Vendor Assessment",
+        "Supplier Due Diligence"
+      ],
+      "description": "Third-Party Security Assessment is a control that evaluates the security posture of vendors and service providers before and during engagement. The control requires collecting evidence such as audit reports, questionnaires, and certifications. It includes criteria for assessing risk based on data access, service criticality, and regulatory impact. The control mandates remediation plans for identified gaps and defines approval workflows. Ongoing monitoring and reassessment ensure that vendor security remains adequate over time. This control supports compliance with frameworks that require supplier oversight and accountability. It maps to vendor risk management policies and to data protection requirements. Evidence includes assessment reports, contract clauses, and tracking of remediation activities. Effective third-party assessment reduces the risk of supply chain incidents and ensures that external partners align with internal security standards. It also supports transparency with customers and regulators by demonstrating due diligence in vendor selection and oversight. Assessments should include a review of subcontractors and supply chain dependencies, ensuring that downstream risks are understood and that obligations flow through contractual terms. Evidence should be retained in a centralized repository with clear ownership and review dates, enabling efficient audits and consistent decision-making when renewing or expanding vendor relationships. This supports consistent oversight and reduces surprises during compliance examinations."
+    }
+  ],
+  "mappings": {
+    "framework_policy_map": [
+      {
+        "framework_id": "framework_iso27001",
+        "policy_id": "policy_access_control"
+      },
+      {
+        "framework_id": "framework_iso27001",
+        "policy_id": "policy_incident_response"
+      },
+      {
+        "framework_id": "framework_iso27001",
+        "policy_id": "policy_data_classification"
+      },
+      {
+        "framework_id": "framework_iso27001",
+        "policy_id": "policy_change_management"
+      },
+      {
+        "framework_id": "framework_iso27001",
+        "policy_id": "policy_vendor_risk"
+      },
+      {
+        "framework_id": "framework_iso27001",
+        "policy_id": "policy_business_continuity"
+      },
+      {
+        "framework_id": "framework_nist80053",
+        "policy_id": "policy_access_control"
+      },
+      {
+        "framework_id": "framework_nist80053",
+        "policy_id": "policy_incident_response"
+      },
+      {
+        "framework_id": "framework_nist80053",
+        "policy_id": "policy_data_classification"
+      },
+      {
+        "framework_id": "framework_nist80053",
+        "policy_id": "policy_change_management"
+      },
+      {
+        "framework_id": "framework_nist80053",
+        "policy_id": "policy_business_continuity"
+      },
+      {
+        "framework_id": "framework_soc2",
+        "policy_id": "policy_access_control"
+      },
+      {
+        "framework_id": "framework_soc2",
+        "policy_id": "policy_incident_response"
+      },
+      {
+        "framework_id": "framework_soc2",
+        "policy_id": "policy_change_management"
+      },
+      {
+        "framework_id": "framework_soc2",
+        "policy_id": "policy_vendor_risk"
+      },
+      {
+        "framework_id": "framework_soc2",
+        "policy_id": "policy_business_continuity"
+      },
+      {
+        "framework_id": "framework_pcidss",
+        "policy_id": "policy_access_control"
+      },
+      {
+        "framework_id": "framework_pcidss",
+        "policy_id": "policy_data_classification"
+      },
+      {
+        "framework_id": "framework_pcidss",
+        "policy_id": "policy_change_management"
+      },
+      {
+        "framework_id": "framework_pcidss",
+        "policy_id": "policy_vendor_risk"
+      },
+      {
+        "framework_id": "framework_pcidss",
+        "policy_id": "policy_business_continuity"
+      }
+    ],
+    "policy_control_map": [
+      {
+        "policy_id": "policy_access_control",
+        "control_id": "control_mfa"
+      },
+      {
+        "policy_id": "policy_access_control",
+        "control_id": "control_least_privilege"
+      },
+      {
+        "policy_id": "policy_access_control",
+        "control_id": "control_logging_monitoring"
+      },
+      {
+        "policy_id": "policy_incident_response",
+        "control_id": "control_logging_monitoring"
+      },
+      {
+        "policy_id": "policy_incident_response",
+        "control_id": "control_backup_recovery"
+      },
+      {
+        "policy_id": "policy_incident_response",
+        "control_id": "control_security_awareness"
+      },
+      {
+        "policy_id": "policy_data_classification",
+        "control_id": "control_encryption"
+      },
+      {
+        "policy_id": "policy_data_classification",
+        "control_id": "control_logging_monitoring"
+      },
+      {
+        "policy_id": "policy_data_classification",
+        "control_id": "control_network_segmentation"
+      },
+      {
+        "policy_id": "policy_change_management",
+        "control_id": "control_secure_config"
+      },
+      {
+        "policy_id": "policy_change_management",
+        "control_id": "control_vulnerability_mgmt"
+      },
+      {
+        "policy_id": "policy_change_management",
+        "control_id": "control_logging_monitoring"
+      },
+      {
+        "policy_id": "policy_vendor_risk",
+        "control_id": "control_third_party_assessment"
+      },
+      {
+        "policy_id": "policy_vendor_risk",
+        "control_id": "control_logging_monitoring"
+      },
+      {
+        "policy_id": "policy_business_continuity",
+        "control_id": "control_backup_recovery"
+      },
+      {
+        "policy_id": "policy_business_continuity",
+        "control_id": "control_network_segmentation"
+      },
+      {
+        "policy_id": "policy_business_continuity",
+        "control_id": "control_security_awareness"
+      }
+    ],
+    "framework_control_map": [
+      {
+        "framework_id": "framework_iso27001",
+        "control_id": "control_mfa"
+      },
+      {
+        "framework_id": "framework_iso27001",
+        "control_id": "control_least_privilege"
+      },
+      {
+        "framework_id": "framework_iso27001",
+        "control_id": "control_logging_monitoring"
+      },
+      {
+        "framework_id": "framework_iso27001",
+        "control_id": "control_encryption"
+      },
+      {
+        "framework_id": "framework_iso27001",
+        "control_id": "control_secure_config"
+      },
+      {
+        "framework_id": "framework_iso27001",
+        "control_id": "control_vulnerability_mgmt"
+      },
+      {
+        "framework_id": "framework_iso27001",
+        "control_id": "control_backup_recovery"
+      },
+      {
+        "framework_id": "framework_iso27001",
+        "control_id": "control_security_awareness"
+      },
+      {
+        "framework_id": "framework_iso27001",
+        "control_id": "control_third_party_assessment"
+      },
+      {
+        "framework_id": "framework_nist80053",
+        "control_id": "control_mfa"
+      },
+      {
+        "framework_id": "framework_nist80053",
+        "control_id": "control_least_privilege"
+      },
+      {
+        "framework_id": "framework_nist80053",
+        "control_id": "control_logging_monitoring"
+      },
+      {
+        "framework_id": "framework_nist80053",
+        "control_id": "control_encryption"
+      },
+      {
+        "framework_id": "framework_nist80053",
+        "control_id": "control_secure_config"
+      },
+      {
+        "framework_id": "framework_nist80053",
+        "control_id": "control_vulnerability_mgmt"
+      },
+      {
+        "framework_id": "framework_nist80053",
+        "control_id": "control_backup_recovery"
+      },
+      {
+        "framework_id": "framework_nist80053",
+        "control_id": "control_security_awareness"
+      },
+      {
+        "framework_id": "framework_nist80053",
+        "control_id": "control_network_segmentation"
+      },
+      {
+        "framework_id": "framework_nist80053",
+        "control_id": "control_third_party_assessment"
+      },
+      {
+        "framework_id": "framework_soc2",
+        "control_id": "control_mfa"
+      },
+      {
+        "framework_id": "framework_soc2",
+        "control_id": "control_least_privilege"
+      },
+      {
+        "framework_id": "framework_soc2",
+        "control_id": "control_logging_monitoring"
+      },
+      {
+        "framework_id": "framework_soc2",
+        "control_id": "control_encryption"
+      },
+      {
+        "framework_id": "framework_soc2",
+        "control_id": "control_secure_config"
+      },
+      {
+        "framework_id": "framework_soc2",
+        "control_id": "control_vulnerability_mgmt"
+      },
+      {
+        "framework_id": "framework_soc2",
+        "control_id": "control_backup_recovery"
+      },
+      {
+        "framework_id": "framework_soc2",
+        "control_id": "control_security_awareness"
+      },
+      {
+        "framework_id": "framework_soc2",
+        "control_id": "control_third_party_assessment"
+      },
+      {
+        "framework_id": "framework_pcidss",
+        "control_id": "control_mfa"
+      },
+      {
+        "framework_id": "framework_pcidss",
+        "control_id": "control_logging_monitoring"
+      },
+      {
+        "framework_id": "framework_pcidss",
+        "control_id": "control_encryption"
+      },
+      {
+        "framework_id": "framework_pcidss",
+        "control_id": "control_secure_config"
+      },
+      {
+        "framework_id": "framework_pcidss",
+        "control_id": "control_vulnerability_mgmt"
+      },
+      {
+        "framework_id": "framework_pcidss",
+        "control_id": "control_backup_recovery"
+      },
+      {
+        "framework_id": "framework_pcidss",
+        "control_id": "control_network_segmentation"
+      }
+    ]
+  }
+}

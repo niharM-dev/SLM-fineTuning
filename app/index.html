@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Compliance Mapping Explorer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <h1>Compliance Mapping Explorer</h1>
+        <p>
+          Explore frameworks, policies, and controls with a structured mapping model. Enter any framework,
+          policy, or control to see related entities and full descriptions.
+        </p>
+      </header>
+
+      <section class="search">
+        <label for="query">Search any framework, policy, or control</label>
+        <div class="search-row">
+          <input id="query" type="text" placeholder="Try: ISO 27001, Access Control Policy, MFA" />
+          <button id="searchBtn" type="button">Search</button>
+        </div>
+        <p class="helper">Matches name, aliases, or ID. Results show mappings across all entities.</p>
+      </section>
+
+      <section class="results" id="results">
+        <p class="empty">Enter a search term to see related mappings.</p>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
